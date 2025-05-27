@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=2 format=3 uid="uid://18wgkshh8e41"]
+
+[ext_resource type="Script" uid="uid://e5tggf86c164" path="res://Resources/enemy/EnemyStats.gd" id="1_q2k5j"]
+
+[resource]
+script = ExtResource("1_q2k5j")
+max_health = 100
+max_speed = 13
+dash_speed = 39
+damage = 20
+stun = 1.5
+can_move = true
+can_shoot = true
+metadata/_custom_type_script = "uid://e5tggf86c164"

@@ -19,6 +19,17 @@ config/icon="res://assets/icon.svg"
 
 enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://Materials/": "yellow",
+"res://Resources/": "green",
+"res://addons/": "red",
+"res://assets/": "orange",
+"res://scenes/": "blue",
+"res://scripts/": "purple"
+}
+
 [global_group]
 
 enemies=""

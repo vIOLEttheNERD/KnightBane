@@ -1,0 +1,26 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cp7t1ghexru5x"]
+
+[sub_resource type="GDScript" id="GDScript_dsgf1"]
+resource_name = "EnemyStats"
+script/source = "class_name EnemyStats
+extends Resource
+
+@export var mesh: Mesh
+
+@export var max_health:= 20
+
+@export var max_speed:= 12
+@export var dash_speed:= 36
+@export var damage:= 5
+@export var can_move:= true
+@export var can_shoot:= false
+"
+
+[resource]
+script = SubResource("GDScript_dsgf1")
+max_health = 20
+max_speed = 12
+dash_speed = 36
+damage = 5
+can_move = true
+can_shoot = false

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=3 format=3 uid="uid://c4mplmr5gjey3"]
+
+[ext_resource type="Script" uid="uid://e5tggf86c164" path="res://Resources/enemy/EnemyStats.gd" id="1_s2cnt"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_s2cnt"]
+
+[resource]
+script = ExtResource("1_s2cnt")
+mesh = SubResource("CapsuleMesh_s2cnt")
+max_health = 20
+max_speed = 10
+dash_speed = 36
+damage = 5
+stun = 1.5
+can_move = true
+can_shoot = false
+metadata/_custom_type_script = "uid://e5tggf86c164"
