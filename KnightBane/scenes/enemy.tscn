@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://mokq84jwp7k2"]
+[gd_scene load_steps=9 format=3 uid="uid://mokq84jwp7k2"]
 
 [ext_resource type="Script" uid="uid://dt4vmfpmp1sxk" path="res://scripts/Enemy/enemy.gd" id="1_7p1mj"]
-[ext_resource type="Resource" uid="uid://c4mplmr5gjey3" path="res://Resources/enemy/FootSoldier.tres" id="2_md0e3"]
 [ext_resource type="PackedScene" uid="uid://chg3ob2k6o5y1" path="res://scenes/components/health_component.tscn" id="3_5uy6h"]
-[ext_resource type="PackedScene" uid="uid://strpqgvsakgh" path="res://scenes/components/weapon_component.tscn" id="4_5uy6h"]
+[ext_resource type="PackedScene" uid="uid://strpqgvsakgh" path="res://scenes/components/hurtbox_component.tscn" id="4_5uy6h"]
 [ext_resource type="PackedScene" uid="uid://bywqld5xfed5o" path="res://scenes/components/hitbox_component.tscn" id="4_c4w8v"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xwavj"]
@@ -14,14 +13,10 @@
 vertex_color_use_as_albedo = true
 albedo_color = Color(1, 0, 0, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_c4w8v"]
-size = Vector3(0.5, 0.5, 1)
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c4w8v"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5uy6h"]
 
 [node name="Enemy" type="CharacterBody3D"]
 script = ExtResource("1_7p1mj")
-stats = ExtResource("2_md0e3")
 
 [node name="ECB" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -35,22 +30,16 @@ mesh = SubResource("CapsuleMesh_7xaro")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_7k104")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Meshes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
-mesh = SubResource("BoxMesh_c4w8v")
-
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." groups=["enemies"]]
 path_height_offset = 1.0
 
-[node name="HealthComponent" parent="." instance=ExtResource("3_5uy6h")]
-STATS = ExtResource("2_md0e3")
-
-[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_c4w8v")]
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_5uy6h")]
 health_component = NodePath("../HealthComponent")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HitboxComponent"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtboxComponent"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-shape = SubResource("CapsuleShape3D_c4w8v")
+shape = SubResource("CapsuleShape3D_5uy6h")
 
-[node name="WeaponComponent" parent="." instance=ExtResource("4_5uy6h")]
-STATS = ExtResource("2_md0e3")
+[node name="HitboxComponent" parent="." instance=ExtResource("4_c4w8v")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_5uy6h")]
