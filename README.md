@@ -1,6 +1,6 @@
 # Knightbane
 
-**Knightbane** is a AAA Hack and Slash Action RPG currently in development by **Bouph Studios**, a game development division under **Lazarelle Holdings**. The game follows *Atlas*, a solitary knight navigating the shifting depths of **Ozarink City** — a mysterious, lore-rich setting full of conflict, forgotten magic, and emerging chaos.
+**Knightbane** is an indie Hack and Slash Action RPG currently in development by **Bouph Studios**, a game development division under **Lazarelle Holdings**. The game follows *Atlas*, a solitary knight navigating the shifting depths of **Ozarink City** — a mysterious, lore-rich setting full of conflict, forgotten magic, and emerging chaos.
 
 ## 🕹️ Game Overview
 
