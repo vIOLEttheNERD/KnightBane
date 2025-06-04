@@ -29,7 +29,6 @@ Bouph Studios is an independently operated subsidiary of **Lazarelle Holdings** 
 * **Lead Designer:** Johnathan Cole Siarza-Geissinger
 * **Head Producer:** Jaron M. Brooks
 * **Head Programmer:** Violet Delu
-* **Secondary Programmer:** Kyle Logan Munzlinger
 * **Lead Sound Designer:** Isaiah Chavez
 * **Secondary Sound Designer:** Jaron M. Brooks
 
